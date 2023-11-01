@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.example.practical_10_mad_041_5a3'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.practical_10_mad_041_5a3"
@@ -30,9 +30,20 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+
+    implementation(libs.core.ktx)
+    implementation(libs.appcompat)
+    implementation(libs.material)
+    implementation(libs.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.espresso.core)
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
